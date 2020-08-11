@@ -19,7 +19,11 @@ package _01_introduction_to_encapsulation;
 public class EncapsulateTheData {
 	//1. Encapsulate the member variables.
 	//   Add restrictions to the setters according to the comment.
-	
+	public void setItemsReceived() {
+		if (itemsReceived > 0) {
+			
+		}
+	}
 	//2. Create a new JUnit Test case and write tests to verify that 
 	//   the member variables' getters and setters are working
 	
