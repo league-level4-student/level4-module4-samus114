@@ -50,7 +50,7 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseList
    	 g.fillRect(0, 0, WIDTH, HEIGHT);
    	
    	 //draw polymorph
-   	 for(int i = 0; polys.size() - 1 > i; i++) {
+   	 for(int i = 0; polys.size() > i; i++) {
    		 polys.get(i).draw(g);
    	 }
     }
@@ -58,7 +58,7 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseList
     @Override
     public void actionPerformed(ActionEvent e) {
    	 repaint();
-   	 for(int i = 0; polys.size() - 1> i; i++) {
+   	 for(int i = 0; polys.size() > i; i++) {
    		 polys.get(i).update();
    	 }
     }

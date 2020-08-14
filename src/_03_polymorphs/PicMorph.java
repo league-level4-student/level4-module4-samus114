@@ -10,7 +10,7 @@ BufferedImage image;
 	PicMorph(int x, int y) {
 		super(x, y, 50, 50);
 		try { 
-			image = ImageIO.read(this.getClass().getResourceAsStream("src/_03_polymorphs/download.jpeg")); 
+			image = ImageIO.read(this.getClass().getResourceAsStream("wolf.jpeg")); 
 			} catch (Exception e) {
 				
 			}
