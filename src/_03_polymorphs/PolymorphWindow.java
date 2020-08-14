@@ -20,6 +20,8 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseList
     
     private JFrame window;
     private Timer timer;
+    public static int mouseX = 0;
+    public static int mouseY = 0;
     ArrayList<Polymorph> polys = new ArrayList<Polymorph>();
     public static void main(String[] args) {
    	 new PolymorphWindow().buildWindow();
@@ -37,6 +39,7 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseList
    	 polys.add(new BluePolymorph(HEIGHT/2, WIDTH/2));
    	 polys.add(new MovingMorph(45, 45));
    	 polys.add(new TextMorph(200,200));
+   	 polys.add(new PicMorph(500, 500));
    	 timer = new Timer(1000 / 30, this);
    	 timer.start();
     }
@@ -47,7 +50,7 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseList
    	 g.fillRect(0, 0, WIDTH, HEIGHT);
    	
    	 //draw polymorph
-   	 for(int i = 0; polys.size() > i; i++) {
+   	 for(int i = 0; polys.size() - 1 > i; i++) {
    		 polys.get(i).draw(g);
    	 }
     }
@@ -55,15 +58,20 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseList
     @Override
     public void actionPerformed(ActionEvent e) {
    	 repaint();
-   	 for(int i = 0; polys.size() > i; i++) {
+   	 for(int i = 0; polys.size() - 1> i; i++) {
    		 polys.get(i).update();
    	 }
     }
 
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
+		mouseX = arg0.getX();
+		mouseY = arg0.getY();
+		String string = "you clicked it!";
 		// TODO Auto-generated method stub
-
+		if(PolymorphWindow.mouseX > 205 && PolymorphWindow.mouseX < 253 && PolymorphWindow.mouseY > 231 && PolymorphWindow.mouseY < 280) {	
+			JOptionPane.showMessageDialog(null, string);
+		}
 	}
 
 	@Override

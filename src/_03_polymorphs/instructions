@@ -14,4 +14,4 @@ done 6. Use for-each loops to call the draw and update method for all the Polymo
 did but code crashed Mr. Daniel gave approval	a) Create a Polymorph that moves in a circle. hint: Math.sin() Math.cos()
 did but code crashed Mr. Daniel gave approval	b) Create a Polymorph that follows your mouse.
 	c) Create a Polymorph that displays an image.
-	d) Create a Polymorph that displays a JOptionPane message dialog when clicked.
+ did	d) Create a Polymorph that displays a JOptionPane message dialog when clicked.
